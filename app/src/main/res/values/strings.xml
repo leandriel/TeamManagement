@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TeamManagement</string>
+    <string name="selected_item">Selected item:</string>
+    <string name="name_error_form">Falta nombre de usuario</string>
+    <string name="surname_error_form">Falta apellido de usuario</string>
+    <string name="email_error_form">Falta email de usuario</string>
+    <string name="date_error_form">Falta fecha de nacimiento de usuario</string>
+    <string name="dni_error_form">Falta DNI de usuario</string>
+    <string name="phone_error_form">Falta telefono de usuario</string>
+    <string name="div_error_form">Falta seleccionar division de usuario</string>
+    <string name="pass_error_form">Falta contraseña de usuario</string>
+    <string name="pass_error_6_form">La contraseña requiere minimo 6 caracteres</string>
+
+
+
+    <string name="success_form">Usuario creado correctamente</string>
+
+    <string-array name="Divisiones">
+        <item>Primera</item>
+        <item>Cuarta</item>
+        <item>Quinta</item>
+        <item>Sexta</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>Veteranos</item>
+    </string-array>
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "397523278539",
+    "firebase_url": "https://team-management-f931b-default-rtdb.firebaseio.com",
+    "project_id": "team-management-f931b",
+    "storage_bucket": "team-management-f931b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397523278539:android:2e87f0eed33d7b02a1d94e",
+        "android_client_info": {
+          "package_name": "com.leandroid.system.teammanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397523278539-2k03lq32oc16fgs6jjeg9gipak7pp9ff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH1eXvZ4R8pk2xg0AakWNM1xJ2r1IJAag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397523278539-2k03lq32oc16fgs6jjeg9gipak7pp9ff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
