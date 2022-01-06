@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.FilterQueryProvider
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
+import com.leandroid.system.teammanagement.model.TableItem
 
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +20,7 @@ class AuthActivity : AppCompatActivity() {
     private fun setup(){
 
         title = "autenticación"
+
 
         val etPass = findViewById<EditText>(R.id.et_pass)
         val etEmail = findViewById<EditText>(R.id.et_email)

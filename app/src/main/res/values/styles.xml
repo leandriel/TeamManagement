@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextViewTableItemGrid" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="AppTheme.TextView" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#0E0D0D</item>
+    </style>
+
+    <style name="menuItemAppearance" parent="AppTheme.TextView"/>
+</resources>

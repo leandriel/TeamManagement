@@ -12,7 +12,6 @@
     <string name="pass_error_6_form">La contraseña requiere minimo 6 caracteres</string>
 
 
-
     <string name="success_form">Usuario creado correctamente</string>
 
     <string-array name="Divisiones">
@@ -24,4 +23,10 @@
         <item>2011</item>
         <item>Veteranos</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+
+
 </resources>
