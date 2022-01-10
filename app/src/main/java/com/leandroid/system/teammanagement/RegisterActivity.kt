@@ -30,10 +30,6 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
         val view = binding.root
         setContentView(view)
 
-
-
-
-
         binding.etDateReg.setOnClickListener {
             showDatePickerDialog()
         }
@@ -46,14 +42,11 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
         }
 
         initSpinner()
-
-
     }
 
     private fun showDatePickerDialog() =
 
           dialog.show(supportFragmentManager, "datePicker")
-
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, day: Int) {
         val selectedDate = day.toString() + " / " + (month + 1) + " / " + year
@@ -62,20 +55,13 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
         et_date_reg.setText(selectedDate)
     }
 
-
     private fun initSpinner() {
         val divisiones = resources.getStringArray(R.array.Divisiones)
         val spinner = findViewById<Spinner>(R.id.sp_division_reg)
 
         val adaptador = ArrayAdapter(this, android.R.layout.simple_spinner_item,divisiones)
         spinner.adapter = adaptador
-
-
-
-
     }
-
-
 
     private fun validarForm(): Boolean {
         var esValido = true
@@ -122,23 +108,12 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
             esValido = false
         }
         else binding.etPassReg.error = null
-
-
-
         return esValido
     }
 
-
-
     private fun registerUser(){
-        db.collection("users").document("email").set(hashMapOf("name" to "leo"))
-            .addOnCompleteListener {
-                print(it)
-            }
-            .addOnFailureListener {
-                print(it)
-            }
-       FirebaseAuth.getInstance().createUserWithEmailAndPassword(binding.etEmailReg.text.toString(),
+        db.collection("users").document("email")
+            FirebaseAuth.getInstance().createUserWithEmailAndPassword(binding.etEmailReg.text.toString(),
             binding.etPassReg.text.toString())
 
             .addOnCompleteListener() {
@@ -153,12 +128,8 @@ class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener
                         "phone" to binding.etTelReg.text.toString(),
                         "division" to binding.spDivisionReg.selectedItem.toString(),
                         "password" to binding.etPassReg.text.toString()
-
                     )
                 )
-
-
-
             }else{
                 Toast.makeText(this,"No se logro crear el usuario",Toast.LENGTH_LONG).show()
             }

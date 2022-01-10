@@ -35,11 +35,8 @@ class TournamentsActivity : AppCompatActivity() {
 
         spinnerAdapter()
         itemAdapter()
-
-
-
-
     }
+
     private fun spinnerAdapter(){
         val list = resources.getStringArray(R.array.Divisiones)
 
@@ -54,6 +51,4 @@ class TournamentsActivity : AppCompatActivity() {
             TableItem(3,"SAN CAYETANO",5,1,2,0,3,1,2,5),
             TableItem(4,"ARCO IRIS",5,1,2,0,3,1,2,5)
         )
-
-
 }
