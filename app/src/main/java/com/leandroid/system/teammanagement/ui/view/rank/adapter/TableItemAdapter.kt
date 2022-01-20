@@ -1,13 +1,9 @@
-package com.leandroid.system.teammanagement.adapters
+package com.leandroid.system.teammanagement.ui.view.rank.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.leandroid.system.teammanagement.R
 import com.leandroid.system.teammanagement.databinding.ItemTableRankBinding
-import com.leandroid.system.teammanagement.databinding.TableGridBinding
 import com.leandroid.system.teammanagement.model.TableItem
 
 class TableItemAdapter: RecyclerView.Adapter<TableItemAdapter.TableItemHolder>() {

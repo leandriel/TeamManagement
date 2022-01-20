@@ -1,22 +1,15 @@
-package com.leandroid.system.teammanagement
+package com.leandroid.system.teammanagement.ui.view.register
 
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.View
-import android.view.ViewGroup
 import android.widget.*
-import androidx.core.view.get
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
-import com.leandroid.system.teammanagement.databinding.ActivityHomeBinding
+import com.leandroid.system.teammanagement.R
 import com.leandroid.system.teammanagement.databinding.ActivityRegisterBinding
-import com.leandroid.system.teammanagement.utils.VisualUtils
-import java.util.*
-import kotlin.collections.HashMap
+import com.leandroid.system.teammanagement.utils.DatePickerFragment
 
 class RegisterActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener {
     private val dialog = DatePickerFragment.newInstance(this)

@@ -8,9 +8,8 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.leandroid.system.teammanagement.adapters.TableItemAdapter
+import com.leandroid.system.teammanagement.ui.view.rank.adapter.TableItemAdapter
 import com.leandroid.system.teammanagement.databinding.FragmentRankBinding
-import com.leandroid.system.teammanagement.ui.viewmodel.rank.RankViewModel
 
 class RankFragment : Fragment() {
     private lateinit var binding: FragmentRankBinding

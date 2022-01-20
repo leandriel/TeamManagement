@@ -1,4 +1,4 @@
-package com.leandroid.system.teammanagement.adapters
+package com.leandroid.system.teammanagement.ui.view.tournament.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

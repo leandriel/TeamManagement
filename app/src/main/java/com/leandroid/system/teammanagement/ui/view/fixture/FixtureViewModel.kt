@@ -1,4 +1,4 @@
-package com.leandroid.system.teammanagement.ui.viewmodel.fixture
+package com.leandroid.system.teammanagement.ui.view.fixture
 
 import androidx.lifecycle.ViewModel
 

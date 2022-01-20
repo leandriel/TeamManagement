@@ -1,10 +1,10 @@
-package com.leandroid.system.teammanagement
+package com.leandroid.system.teammanagement.utils
 
-import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
+import com.leandroid.system.teammanagement.R
 import java.util.*
 
 class DatePickerFragment : DialogFragment() {
@@ -17,7 +17,8 @@ class DatePickerFragment : DialogFragment() {
         val month = c.get(Calendar.MONTH)
         val day = c.get(Calendar.DAY_OF_MONTH)
 
-        return DatePickerDialog(requireActivity(), R.style.SpinnerDatePickerDialog, listener, year, month, day)
+        return DatePickerDialog(requireActivity(),
+            R.style.SpinnerDatePickerDialog, listener, year, month, day)
     }
 
     companion object {

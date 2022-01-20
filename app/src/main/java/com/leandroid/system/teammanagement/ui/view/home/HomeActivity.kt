@@ -3,12 +3,11 @@ package com.leandroid.system.teammanagement
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
 import com.leandroid.system.teammanagement.databinding.ActivityHomeBinding
+import com.leandroid.system.teammanagement.ui.view.register.RegisterActivity
 
 enum class ProviderType{
     BASIC
-
 }
 
 class HomeActivity : AppCompatActivity() {

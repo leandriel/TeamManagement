@@ -1,4 +1,4 @@
-package com.leandroid.system.teammanagement.ui.viewmodel.rank
+package com.leandroid.system.teammanagement.ui.view.rank
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

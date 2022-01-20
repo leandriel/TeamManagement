@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import com.leandroid.system.teammanagement.R
 import com.leandroid.system.teammanagement.model.TableItem
-import com.leandroid.system.teammanagement.adapters.ViewPagerAdapter
+import com.leandroid.system.teammanagement.ui.view.tournament.adapter.ViewPagerAdapter
 import com.leandroid.system.teammanagement.databinding.ActivityTournamentsBinding
 
 class TournamentsActivity : AppCompatActivity() {

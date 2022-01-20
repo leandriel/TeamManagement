@@ -4,42 +4,199 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.fixture.CreateFixtureActivity">
+    tools:context=".ui.view.fixture.create.CreateFixtureActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerCreateFixture"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner_tournament_fixture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="85dp"
-        android:layout_height="22dp"
-        android:text="Equipo local:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerTeamNameLocal"
+
+
+    <Spinner
+        android:id="@+id/spinner_tournament_fixture"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toTopOf="@id/spinner_div_fixture"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerCreateFixture" />
+
+    <Spinner
+        android:id="@+id/spinner_div_fixture"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toTopOf="@id/spinner_match_tournament_fixture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_tournament_fixture" />
+
+    <Spinner
+        android:id="@+id/spinner_match_tournament_fixture"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toTopOf="@+id/date_picker_fixture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinner_div_fixture" />
+
+    <DatePicker
+        android:id="@+id/date_picker_fixture"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:datePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/timeP_Fixture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:calendarViewShown="false"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_match_tournament_fixture"
+        tools:ignore="MissingConstraints" />
+
+    <TimePicker
+        android:id="@+id/timeP_Fixture"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="8dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@id/spinnerTeamNameLocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_picker_fixture"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinnerTeamNameLocal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
         android:autofillHints="Equipo local"
-        app:layout_constraintBottom_toTopOf="@id/spinnerTeamNameVisit"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTeamNameVisit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/timeP_Fixture" />
 
     <Spinner
         android:id="@+id/spinnerTeamNameVisit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/spinnerTeamNameLocal" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar fecha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar partido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/name_tournament"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione torneo"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_tournament_fixture"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerCreateFixture" />
+
+    <TextView
+        android:id="@+id/name_div"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione division:"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_div_fixture"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_tournament" />
+
+    <TextView
+        android:id="@+id/name_match"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Selec. fecha de torneo:"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_match_tournament_fixture"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_div" />
+
+    <TextView
+        android:id="@+id/date_match"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione dia:"
+        app:layout_constraintEnd_toStartOf="@+id/date_picker_fixture"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_match" />
+
+    <TextView
+        android:id="@+id/time_match"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione hora:"
+        app:layout_constraintEnd_toStartOf="@+id/timeP_Fixture"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_match" />
+
+    <TextView
+        android:id="@+id/name_local"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Equipo local"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerTeamNameLocal"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_match" />
+
+    <TextView
+        android:id="@+id/name_visit"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginTop="15dp"
+        android:text="Equipo visitante:"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerTeamNameVisit"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_local" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

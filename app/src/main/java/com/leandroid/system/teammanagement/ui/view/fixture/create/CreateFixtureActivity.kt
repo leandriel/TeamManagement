@@ -1,4 +1,4 @@
-package com.leandroid.system.teammanagement.ui.view.fixture
+package com.leandroid.system.teammanagement.ui.view.fixture.create
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,13 +6,15 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.google.firebase.database.*
 import com.leandroid.system.teammanagement.R
+import com.leandroid.system.teammanagement.data.network.FirebaseManager
 import com.leandroid.system.teammanagement.model.TeamName
 import com.leandroid.system.teammanagement.ui.`interface`.IFirebaseLoadDone
 
 class CreateFixtureActivity : AppCompatActivity(), IFirebaseLoadDone {
+
     override fun onFirebaseLoadSuccess(teamList: List<TeamName>) {
-        val team_name_list = getTeamList(teamList)
-        val adapter = ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,team_name_list)
+        val teamNameList = getTeamList(teamList)
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, teamNameList)
         val spinnerTeamLocal = findViewById<Spinner>(R.id.spinnerTeamNameLocal)
         spinnerTeamLocal.adapter = adapter
         val spinnerTeamVisite = findViewById<Spinner>(R.id.spinnerTeamNameVisit)
@@ -28,7 +30,7 @@ class CreateFixtureActivity : AppCompatActivity(), IFirebaseLoadDone {
     }
 
     override fun onFirebaseLoadFailed(message: String) {
-
+        val f =  FirebaseManager()
     }
 
     private val teamRef : DatabaseReference = FirebaseDatabase.getInstance().getReference("teams")
@@ -52,13 +54,8 @@ class CreateFixtureActivity : AppCompatActivity(), IFirebaseLoadDone {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                iFirebaseLoadDone.onFirebaseLoadFailed(error.message)
-            }
+                iFirebaseLoadDone.onFirebaseLoadFailed(error.message) }
 
         })
-
     }
-
-
-
 }

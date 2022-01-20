@@ -10,23 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamManagement">
         <activity
-            android:name=".ui.view.tournament.TournamentsActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".ui.view.fixture.create.CreateFixtureActivity"
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".ui.view.tournament.TournamentsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.view.register.RegisterActivity"
             android:exported="true"/>
 
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".ui.view.auth.AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

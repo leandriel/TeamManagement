@@ -4,9 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_auth.xml" value="0.22" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_create_fixture.xml" value="0.2" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_home.xml" value="0.22" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_register.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/activity_tournaments.xml" value="0.15" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/fragment_fixture.xml" value="0.1" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/fragment_rank.xml" value="0.1" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/header_table_rank.xml" value="0.25" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/item_table_rank.xml" value="0.5" />
+        <entry key="..\:/Users/leand/AndroidStudioProjects/TeamManagement/app/src/main/res/layout/table_grid.xml" value="0.33" />
+        <entry key="..\:/Users/leand/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1" />
       </map>
     </option>
   </component>
@@ -15,5 +23,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.15" />
+      </ProjectState>
+    </option>
   </component>
 </project>
